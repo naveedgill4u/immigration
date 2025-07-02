@@ -1,0 +1,11 @@
+---
+title: "XX"
+author: Naveed Ahmad
+execute: 
+  echo: false
+---
+
+```{r #| message: false}
+library(tidyverse)
+library(primer.data)
+```
