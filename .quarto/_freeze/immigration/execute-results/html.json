@@ -1,0 +1,15 @@
+{
+  "hash": "7833427b631f23c1199b5c4d6c8c1ef1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"XX\"\nauthor: Naveed Ahmad\nexecute: \n  echo: false\n---\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\nThe general form of a multiple linear regression model is:\n$$\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_k X_k + \\varepsilon\n$$\n\nThe fitted linear model is written as:\n\n$$\n\\hat{\\text{att\\_end}} = 8.453 + 1.547 \\cdot \\text{treatment}_{\\text{Treated}}\n$$\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n\nTable: Regression Results\n\n|term             | estimate| std.error| statistic| p.value| conf.low| conf.high|\n|:----------------|--------:|---------:|---------:|-------:|--------:|---------:|\n|(Intercept)      |     8.45|     0.347|     24.30|   0.000|    7.770|      9.14|\n|treatmentTreated |     1.55|     0.521|      2.97|   0.004|    0.514|      2.58|\n\n\n:::\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](immigration_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\nIn this experiment we predicted average effect of exposure to Spanish speaker at train station on attitude of commuters toward immigration today in Georgia. Data for this study is used from experiment in 2012 on Boston. However, the predictions of this study are based upon assumptions of reliability, validity, representativeness and un-confoundedness which usually may not hold good due to change in time, characteristics of Boston and Georgia commuters and conditional exposure of Spanish speakers.\nwe model attitude toward imigration through integer value ranging from 3 to 15 as a liner function to Spanish speaker. The average casual effect of exposure to Spanish speaker at train station on attitude toward immigration is 1.55 which may vary from 0.514 to 2.58 at confidence level of 95%.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
