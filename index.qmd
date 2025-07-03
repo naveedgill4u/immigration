@@ -1,14 +1,11 @@
 ---
 title: "XX"
 author: Naveed Ahmad
----
-
----
-title: "XX"
-author: Naveed Ahmad
 execute: 
   echo: false
 ---
+
+
 
 ```{r}
 #| message: false
