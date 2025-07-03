@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "immigration.html",
+    "href": "immigration.html",
+    "title": "XX",
+    "section": "",
+    "text": "The general form of a multiple linear regression model is: \\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_k X_k + \\varepsilon\n\\]\nThe fitted linear model is written as:\n\\[\n\\hat{\\text{att\\_end}} = 8.453 + 1.547 \\cdot \\text{treatment}_{\\text{Treated}}\n\\]\n\n\n\nRegression Results\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n8.45\n0.347\n24.30\n0.000\n7.770\n9.14\n\n\ntreatmentTreated\n1.55\n0.521\n2.97\n0.004\n0.514\n2.58\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this experiment we predicted average effect of exposure to Spanish speaker at train station on attitude of commuters toward immigration today in Georgia. Data for this study is used from experiment in 2012 on Boston. However, the predictions of this study are based upon assumptions of reliability, validity, representativeness and un-confoundedness which usually may not hold good due to change in time, characteristics of Boston and Georgia commuters and conditional exposure of Spanish speakers. we model attitude toward imigration through integer value ranging from 3 to 15 as a liner function to Spanish speaker. The average casual effect of exposure to Spanish speaker at train station on attitude toward immigration is 1.55 which may vary from 0.514 to 2.58 at confidence level of 95%."
+  }
+]
