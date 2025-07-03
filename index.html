@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -140,6 +169,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The general form of a multiple linear regression model is: <span class="math display">\[
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_k X_k + \varepsilon
+\]</span></p>
+<p>The fitted linear model is written as:</p>
+<p><span class="math display">\[
+\hat{\text{att\_end}} = 8.453 + 1.547 \cdot \text{treatment}_{\text{Treated}}
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Regression Results</caption>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 12%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">term</th>
+<th style="text-align: right;">estimate</th>
+<th style="text-align: right;">std.error</th>
+<th style="text-align: right;">statistic</th>
+<th style="text-align: right;">p.value</th>
+<th style="text-align: right;">conf.low</th>
+<th style="text-align: right;">conf.high</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">8.45</td>
+<td style="text-align: right;">0.347</td>
+<td style="text-align: right;">24.30</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">7.770</td>
+<td style="text-align: right;">9.14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">treatmentTreated</td>
+<td style="text-align: right;">1.55</td>
+<td style="text-align: right;">0.521</td>
+<td style="text-align: right;">2.97</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.514</td>
+<td style="text-align: right;">2.58</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In this experiment we predicted average effect of exposure to Spanish speaker at train station on attitude of commuters toward immigration today in Georgia. Data for this study is used from experiment in 2012 on Boston. However, the predictions of this study are based upon assumptions of reliability, validity, representativeness and un-confoundedness which usually may not hold good due to change in time, characteristics of Boston and Georgia commuters and conditional exposure of Spanish speakers. we model attitude toward imigration through integer value ranging from 3 to 15 as a liner function to Spanish speaker. The average casual effect of exposure to Spanish speaker at train station on attitude toward immigration is 1.55 which may vary from 0.514 to 2.58 at confidence level of 95%.</p>
 
 
 
