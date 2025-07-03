@@ -1,3 +1,4 @@
-immigration_files
-
 /.quarto/
+immigration_files
+_site
+*_cache
